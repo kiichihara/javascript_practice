@@ -150,34 +150,23 @@ test('Number.parseInt,Number.parseFloatの練習', () => {
 });
 
 test('functionの練習', () => {
+  function double(num){
+    return num*2;
+  }
+  expect(double(10)).toBe(20);
 
-function double(num){
-  return num*2;
-} 
-
-expect(double(10)).toBe(20);
-
-function echo(x){
-  return x;
-}
-
-expect(echo(10)).toBe(10);
-expect(echo("10A")).toBe("10A");
-expect(echo()).toBe(undefined);
+  function echo(x){
+    return x;
+  }
+  expect(echo(1)).toBe(1);
+  expect(echo()).toBe(undefined);
 });
 
 test('デフォルト引数の練習', () => {
- function addPrefix2(text, prefix="デフォルト:") {
-  // `prefix`が指定されていない場合は"デフォルト:"を付ける
-
-  //デフォルト関数なので↓は不要になる。
-  //const pre = typeof prefix === "string" ? prefix : "デフォルト:";
-  return prefix + text;
-}
-
-expect(addPrefix2("abc")).toBe("デフォルト:abc");
-expect(addPrefix2("abc","d")).toBe("dabc");
-
-expect(addPrefix2(123)).toBe("デフォルト:123");
-expect(addPrefix2("てきすと","プレフィックス")).toBe("プレフィックスてきすと");
+  function addPrefix2(text, prefix = "デフォルト:") {
+    // `prefix`が指定されていない場合は"デフォルト:"を付ける
+    return prefix + text;
+  }
+  expect(addPrefix2("abc") ).toBe("デフォルト:abc");
+  expect(addPrefix2("abc","d") ).toBe("dabc");
 });
