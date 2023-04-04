@@ -1,5 +1,4 @@
 const sum = require('./sum');
-
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
 });
@@ -52,7 +51,7 @@ test('文字列の練習', () => {
 いいい
  う`;
  const str4="あああ\nいいい\n う";
-
+ 
  expect(str3===str4).toBe(true);
 
  const str5="これは${str1}です";
@@ -77,7 +76,7 @@ test('オブジェクトの練習', () => {
  expect(object.hasLicense).toBe(true);
  expect(object.nested.valuea).toBe(1);
 });
-  
+
  test('配列の練習', () => {
  const hairetu=["aaa",111,true,{age:20,address:"東京"}]
 
@@ -86,6 +85,7 @@ test('オブジェクトの練習', () => {
  expect(hairetu[2]).toBe(true);
  expect(hairetu[3].address).toBe("東京");
  expect(hairetu[3].age).toBe(20);
+
 });
 
 test('べき乗の練習', () => {
@@ -169,4 +169,5 @@ test('デフォルト引数の練習', () => {
   }
   expect(addPrefix2("abc") ).toBe("デフォルト:abc");
   expect(addPrefix2("abc","d") ).toBe("dabc");
+
 });
