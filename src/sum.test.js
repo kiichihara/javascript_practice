@@ -171,3 +171,14 @@ test('デフォルト引数の練習', () => {
   expect(addPrefix2("abc","d") ).toBe("dabc");
 
 });
+
+test("functionとArrow functionの練習" , () => {
+  const a = function (x){
+    return x*x;
+  }
+  const b = (x) => {
+    return x*x;
+  } 
+  const c = x => x*x;
+}
+)
